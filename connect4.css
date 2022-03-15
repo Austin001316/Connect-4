@@ -1,0 +1,58 @@
+/* game board table */
+
+#board td {
+  width: 50px;
+  height: 50px;
+  border: solid 1px #666;
+  position: relative;
+}
+
+/* pieces are div within game table cells: draw as colored circles */
+
+.piece {
+  /* TODO: make into circles */
+  margin: 5px;
+  top: -1px;
+  width: 80%;
+  height: 80%;
+  border-radius:50%;
+  border: solid 1px black;
+  position: absolute;
+  animation: movedown 1s ease-in-out;
+}
+
+#player1 {
+  background-color: blue;
+}
+
+#player2 {
+  background-color: red;
+}
+
+/* column-top is table row of clickable areas for each column */
+
+#column-top td {
+  border: dashed 1px lightgray;
+}
+
+#column-top td:hover {
+  background-color: gold;
+}
+
+@keyframes movedown{
+  from{top : -400px}
+  to {top: 0px}
+}
+
+.reset {
+background-color: black;
+border: none;
+color: white;
+margin-left: 10%;
+margin-top: 4%;
+}
+
+h1 {
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+margin-left: 3%;
+}
